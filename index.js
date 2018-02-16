@@ -5,11 +5,14 @@ var http   = require('http');
 var socket_io     = require('socket.io');
 var EventEmitter = require('events').EventEmitter;
 var util         = require('util');
+var path = require('path');
 
 var server = new http.Server(app);
 var io     = new socket_io(server);
 
 var keys = {};
+
+app.use('/jquery', express.static(path.dirname(require.resolve('jquery'))));
 
 app.use(express.static(__dirname + '/public', {
 	dotfiles: 'ignore',
