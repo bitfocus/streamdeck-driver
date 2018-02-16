@@ -11,6 +11,8 @@ var io     = new socket_io(server);
 
 var keys = {};
 
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
+
 app.use(express.static(__dirname + '/public', {
 	dotfiles: 'ignore',
 	etag: true,
