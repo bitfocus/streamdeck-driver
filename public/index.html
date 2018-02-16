@@ -1,7 +1,12 @@
 <html>
+<head>
+	<style>
+		body { margin: 0; padding: 0; }
+	</style>
+</head>
+<body>
 <script src="/socket.io/socket.io.js"></script>
 <script src="jquery.min.js"></script>
-Jepp
 <canvas id="streamdeck" width=948 height=746></canvas>
 <script type="text/javascript">
 	var socket = io();
@@ -86,4 +91,5 @@ Jepp
 		ctx.drawImage(bg, 0, 0);
 	}
 </script>
+</body>
 </html>
