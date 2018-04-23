@@ -1,4 +1,4 @@
-var streamDeck   = require('elgato-stream-deck');
+var streamDeck   = require('elgato-stream-deck-clean');
 var express = require('express');
 var app = express();
 var http   = require('http');
