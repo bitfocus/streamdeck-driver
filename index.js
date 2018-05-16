@@ -111,6 +111,21 @@ driver.prototype.clearKey = function(keyIndex) {
 	io.emit('clearKey', keyIndex);
 };
 
+driver.prototype.clearAllKeys = function() {
+	var self = this;
+
+	if (self.streamdeck) {
+		self.streamdeck.clearAllKeys();
+	}
+
+	for (var i = 0; i < 15; ++i) {
+
+		keys[keyIndex] = Buffer.alloc(15552);
+		io.emit('clearKey', keyIndex);
+
+	}
+};
+
 driver.prototype.setBrightness = function(value) {
 	var self = this;
 
